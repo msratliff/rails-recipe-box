@@ -1,0 +1,91 @@
+// Place all the styles related to the Recipe controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+/* Nav Bar */
+
+* {
+	
+}
+
+body {
+	font-family: sans-serif;
+	background-color: #abcdef;
+
+}
+
+.navbar {
+	background-color: lightgrey;
+	display: flex;
+	justify-content: space-between;
+	width: 75%;
+	margin: auto;
+
+}
+
+
+.navbar__logo, .navbar__links {
+	padding: 0.5rem;
+
+}
+
+.navbar__link {
+	color: darkgrey;
+	padding: 0 0.5rem;
+}
+
+.fa {
+	font-size: 25px;
+	color: darkblue;
+}
+
+
+/* Index Grid Layout */
+
+.grid {
+	display: flex;
+	justify-content: space-around;
+	width: 75%;
+	margin: auto;
+	flex-wrap: wrap;
+
+}
+
+.grid__container {
+	
+	max-width: 400px;
+	overflow: hidden;
+	margin: 2% 1%;
+	box-shadow: 0.25rem 0.25rem 3rem #888888;
+	background-color: white;
+	
+
+	
+}
+
+.grid__image {
+	&:hover {
+		min-width: 100%;
+		transform: scale(1.075);
+	}
+}
+
+.grid__text a {
+	padding: 1rem;
+
+}
+
+/* Show Layout */
+
+.show {
+	width: 75%;
+	margin: auto;
+	display: flex;
+	
+
+}
+
+.show__paragraph {
+	display: block;
+}

@@ -9,6 +9,23 @@
   </head>
 
   <body>
+  	<nav class="navbar"> 
+  		<container class="navbar__logo"> 
+        <%= link_to root_path do %> 
+          <i class="fa fa-cutlery" aria-hidden="true"></i>
+<i class="fa fa-archive" aria-hidden="true"></i>
+        <%end%>
+
+      </container>
+  		
+      <container class="navbar__links">
+  			<span class="navbar__link"><%= link_to "Recipe", new_recipe_path %></span>
+  			<span class="navbar__link"><%= link_to "Sign Out", root_path %></span>
+  		</container>
+
+    </nav>
+
     <%= yield %>
+
   </body>
 </html>
