@@ -29,27 +29,20 @@
       <%= f.label :image %><br>
        <%= f.file_field :image %>
     </p>
+
+    <p>
+      <%= label_tag :ingredients %><br>
+      <p>One ingredient per line</p>
+      <%= text_area_tag :ingredients %>
+    </p>
    
     <p>
       <%= f.submit %>
     </p>
   </div>
  
-
-  <h3>Ingredients</h3>
-  <div id='tasks'>
-    <%= f.fields_for :ingredients do |ingredient| %>
-      <%= render 'ingredient_fields', :f => ingredient %>
-    <% end %>
-    <div class='links'>
-      <%= link_to_add_association 'add ingredient', f, :ingredients %>
-    </div>
-    
-    <%= f.submit 'Save' %>
-
-  </div>
-
 <% end %>
+
 
 
   

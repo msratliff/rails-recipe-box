@@ -16,6 +16,10 @@ class RecipesController < ApplicationController
 		@recipe = Recipe.new(recipe_params)
 
 		if @recipe.save
+			params[:ingredients].split("\n").each do |ingredient|
+				@recipe.ingredients.create(name: ingredient)
+			end
+
 			redirect_to @recipe, notice: "Successfully created new recipe!"
 		else
 			render "new"
@@ -41,7 +45,7 @@ class RecipesController < ApplicationController
 	private
 
 		def recipe_params
-			params.require(:recipe).permit(:title, :description, :image, ingredients_attributes: [:id, :name, :_destroy], descriptions_attributes: [:id, :step, :_destroy])
+			params.require(:recipe).permit(:title, :description, :image)
 		end
 
 		def find_recipe
