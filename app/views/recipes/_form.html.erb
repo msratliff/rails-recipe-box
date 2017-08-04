@@ -1,3 +1,5 @@
+
+
 <%= form_for @recipe do |f| %>
  
   <% if @recipe.errors.any? %>
@@ -22,7 +24,7 @@
    
     <p>
       <%= f.label :description %><br>
-      <%= f.text_area :description %>
+      <%= f.text_area :description, :id => "message_area" %>
     </p>
 
     <p>
@@ -30,22 +32,10 @@
        <%= f.file_field :image %>
     </p>
 
-    <p>
-      <%= label_tag :ingredients %><br>
-      <p>One ingredient per line</p>
-      <%= text_area_tag :ingredients %>
-    </p>
-   
+      
     <p>
       <%= f.submit %>
     </p>
   </div>
  
 <% end %>
-
-
-
-  
-  
-  
-  

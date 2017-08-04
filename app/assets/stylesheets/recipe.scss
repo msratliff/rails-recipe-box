@@ -3,17 +3,13 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-/* Nav Bar */
-
-* {
-	
-}
-
 body {
 	font-family: sans-serif;
 	background-color: #abcdef;
 
 }
+
+/* Nav Bar */
 
 .navbar {
 	background-color: lightgrey;
@@ -78,16 +74,64 @@ body {
 
 /* Show Layout */
 
-.show {
+.show-container {
 	width: 75%;
 	margin: auto;
 	display: flex;
-	
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.recipe-container {
+	display: flex;
+	flex-grow: 2;
+	justify-content: space-around;
 
 }
 
-.show__paragraph {
-	display: block;
+.recipe-container__image {
+	margin: 1rem;
+	margin-left: 0;
+}
+
+
+.recipe-container__text {
+	margin: 1rem;
+	
+}
+
+.recipe-container__links {
+	width: 100%;
+	display: flex;
+	justify-content: flex-start;
+}
+
+.recipe-container__link {
+	padding: 1rem;
+	
+}
+
+
+
+.ingredients-container {
+	flex-grow: 1;
+	background-color: white;
+	margin: 1rem;
+	margin-left: 0;
+	display: flex;
+	flex-direction: column;
+	
+}
+
+.directions-container {
+	flex-grow: 1;
+	background-color: white;
+	margin: 1rem 1rem 1rem 1rem	;
+	margin-right: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	
 }
 
 
@@ -100,4 +144,19 @@ body {
 	flex-direction: column;
 	
 
+}
+
+
+/* Edit Layout */
+.edit-container {
+	width: 75%;
+	margin: auto;
+
+}
+
+
+/* Form Layout */
+#message_area {
+	width: 75%;
+	height: 5rem;
 }

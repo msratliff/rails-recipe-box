@@ -1,0 +1,4 @@
+<%= form_for( [@recipe, @recipe.directions.build] ) do |f| %>
+	<%= f.text_field :step, placeholder: "New Step" %>
+	<%= f.submit %>
+<% end %>

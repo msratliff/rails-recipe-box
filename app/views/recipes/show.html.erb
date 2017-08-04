@@ -1,19 +1,48 @@
-<div class="show">
+<div class="show-container">
 
-	<span> <%= image_tag @recipe.image.url(:medium) %> </span>
-	<p class="show__paragraph">
-	  <strong>Title:</strong>
-	  <%= @recipe.title %>
-	</p>
-	 
-	<p>
-	  <strong>Description:</strong>
-	  <%= @recipe.description %>
-	</p>
+	<div class="recipe-container">
+		<div class="recipe-container__image"> 
+			<%= image_tag @recipe.image.url(:medium) %> 
+		</div>
+		
+		<div class="recipe-container__text">
+			<p class="recipe-container__title">
+			  <strong>Title:</strong>
+			  <%= @recipe.title %>
+			</p>
+			 
+			<p class="recipe-container__description" >
+			  <strong>Description:</strong>
+			  <%= @recipe.description %>
+			</p>
 
+			<div class="recipe-container__links">
+				<%= link_to 'Back', root_path , class: "recipe-container__link" %>
+				<%= link_to 'Edit', edit_recipe_path , class: "recipe-container__link" %>
+				<%= link_to 'Delete', recipe_path, method: :delete, data: {confirm: "Are you sure?"} , class: "recipe-container__link" %>
+			</div>
 
-	<%= link_to 'Back', root_path %>
-	<%= link_to 'Edit', edit_recipe_path %>
-	<%= link_to 'Delete', recipe_path, method: :delete, data: {confirm: "Are you sure?"} %>
+		</div>
+
+	</div>
+	<br>
+	
+	<div class="ingredients-container">
+		<%= render @recipe.ingredients %>
+		<div>
+			<%= render "ingredients/form" %>
+		</div>
+	</div>
+
+	
+
+	<div class="directions-container">
+		<%= render @recipe.directions %>
+		<div>
+			<%= render "directions/form" %>
+		</div>
+	</div>
+
 
 </div>
+

@@ -1,0 +1,7 @@
+<div class="direction__name"> <%= direction.step %> </p>
+
+	<%= link_to recipe_direction_path(@recipe, direction.id), method: :delete, data: {} do %> 
+    	<i class="fa fa-times" aria-hidden="true"></i>
+	<%end%>
+
+</div>

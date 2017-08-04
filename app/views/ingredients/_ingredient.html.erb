@@ -1,0 +1,7 @@
+<div class="ingredient__name"> <%= ingredient.name %> 
+
+<%= link_to recipe_ingredient_path(@recipe, ingredient.id), method: :delete, data: {} do %> 
+    	<i class="fa fa-times" aria-hidden="true"></i>
+	<%end%>
+
+</div>
